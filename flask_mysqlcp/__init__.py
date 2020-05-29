@@ -1,8 +1,8 @@
-import pymysql2
+import mysqlcp
 class Pool:
     def __init__(self):
-        self.config=pymysql2.infos()
+        self.config=mysqlcp.infos()
     def create(self):
-        return pymysql2.pool(self.config)
+        return mysqlcp.pool(self.config)
     def destroy(self,pool):
         pool.destroy()
